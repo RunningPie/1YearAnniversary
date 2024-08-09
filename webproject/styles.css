@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dd447f;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #d84495;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 3;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 5;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    width: 80%;
+}
+
+.card {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e25da6;
+    border: 1px solid #e25fa7;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+    height: auto; /* Allow height to be determined by content */
+    z-index: 5;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #d84495;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.tooltip {
+    position: fixed;
+    bottom: 10%; /* Adjust as necessary */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10; /* Ensure tooltip appears above other content */
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none; /* Ensure tooltip doesn't block other interactions */
+}
+
+.card:hover .tooltip {
+    opacity: 1;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
