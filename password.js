@@ -1,5 +1,5 @@
 function checkPassword() {
-    const correctPassword = 'yourPassword'; // Change this to your desired password
+    const correctPassword = '365DaysWithYouAndCounting'; // Change this to your desired password
     const passwordInput = document.getElementById('password-input').value;
     const errorMessage = document.getElementById('error-message');
 

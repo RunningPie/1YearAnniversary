@@ -102,6 +102,10 @@ footer {
     opacity: 1;
 }
 
+#clickable-card{
+    cursor: pointer;
+}
+
 #particles-js {
     position: fixed;
     width: 100%;
