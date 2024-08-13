@@ -84,6 +84,9 @@ footer {
 
 .tooltip {
     position: fixed;
+    width: fit-content;
+    max-width: 80%;
+    height: fit-content;
     bottom: 10%; /* Adjust as necessary */
     left: 50%;
     transform: translateX(-50%);
@@ -96,6 +99,7 @@ footer {
     opacity: 0;
     transition: opacity 0.2s;
     pointer-events: none; /* Ensure tooltip doesn't block other interactions */
+    white-space: normal;
 }
 
 .card:hover .tooltip {
